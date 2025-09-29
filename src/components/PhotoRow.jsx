@@ -11,7 +11,15 @@ function PhotoRowComponent({ photo, rowIndex, absoluteIndex, rowHeight = 70 }) {
       <td style={cellStyle}>{photo.id}</td>
       <td style={cellStyle}>{photo.title}</td>
       <td style={{ ...cellStyle }}>
-        <div style={{ width: 50, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f3f3f3', color: '#444', fontSize: 10 }}>img {absoluteIndex + 1}</div>
+       
+         <img
+          src={photo.thumbnailUrl}
+          alt={`img ${absoluteIndex + 1}`}
+          width={50}
+          height={50}
+          loading='lazy'
+          style={{ objectFit: 'cover', background: '#f3f3f3' }}
+        />
       </td>
       <td style={cellStyle}>
         <a href={photo.url} target='_blank' rel='noreferrer' className='text-gray-700 hover:text-blue-600'>
