@@ -4,9 +4,9 @@ const cellStyle = { border: '1px solid #ddd', padding: '8px', textAlign: 'left' 
 
 function PhotoRowComponent({ photo, rowIndex, absoluteIndex, rowHeight = 70 }) {
   const rowStyle = { height: rowHeight }
-  const baseRowClass = rowIndex % 2 === 1 ? 'bg-gray-50' : 'bg-white'
+  const baseRowClass = rowIndex % 2 === 1 ? 'bg-gray-100' : 'bg-white'
   return (
-    <tr className={`${baseRowClass} hover:bg-gray-100 transition-colors`} style={rowStyle}>
+    <tr className={`${baseRowClass} hover:bg-gray-200 transition-colors`} style={rowStyle}>
       <td style={cellStyle}>{photo.albumId}</td>
       <td style={cellStyle}>{photo.id}</td>
       <td style={cellStyle}>{photo.title}</td>
